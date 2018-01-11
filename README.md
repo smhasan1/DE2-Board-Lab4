@@ -3,6 +3,7 @@
 Consider the circuit in Figure 1. It is a 4-bit synchronous counter which uses four T-type flip-flops. The counter increments its value on each positive edge of the clock if the Enable signal is asserted. The counter is reset to 0 by setting the Clear signal low – it is an active- low asynchronous clear. You are to implement an 8-bit counter of this type.  
 
 
+![image](https://user-images.githubusercontent.com/19510655/34845926-8f5e8568-f6e4-11e7-9a63-1b0b5e11ecb7.png)  
 Figure 1. A 4-bit counter.  
 
 1. Write a Verilog file that defines an 8-bit counter by using the structure depicted in Figure 1. Your code should include a T flip-flop module that is instantiated 8 times to create the counter (i.e. structural Verilog).  
@@ -33,6 +34,14 @@ You may want to use your rotating register (with parallel load) from Lab #3 for 
 Design and implement a circuit that displays the word PASS, in ticker-tape fashion, on the four 7-segment displays HEX3−0. Make the letters move from right to left in intervals of about one second. The patterns that should be displayed in successive clock intervals are given in Table 1.  
 Notice that the word PASS can be displayed using a 7-segment decoder you designed in a previous lab.  
 
+| Clock cycle  | Displayed pattern |
+| ------------- | ------------- |
+| 0  | P A S S |
+| 1  | S P A S |
+| 2  | S S P A |
+| 3  | A S S P |
+| 4  | P A S S |
+| ...  | and so on |
 
 Table 1. Scrolling the word PASS in ticker-tape fashion.  
 
@@ -50,3 +59,6 @@ Design and compile your circuit with Quartus II software, download it onto a DE2
 4. Simulate the circuit with QSim. Your simulation should load the two registers, allowing you to verify the correct product was computed.  
 5. Assign the pins on the FPGA to connect to the switches, keys and 7-segment displays.  
 6. Compile your design and load the circuit onto the DE2 board. Test the circuit by loading the registers with different values and observing the output on the HEX displays and red LEDs.  
+
+![image](https://user-images.githubusercontent.com/19510655/34845907-7f2bb148-f6e4-11e7-8214-b480a58b91b6.png)  
+Figure 2: An eight-bit multiplier circuit.  
