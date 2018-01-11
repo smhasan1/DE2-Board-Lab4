@@ -28,3 +28,25 @@ You may want to use your rotating register (with parallel load) from Lab #3 for 
 2. Simulate your circuit with QSim to verify its correctness.  
 3. Include the pin constraints for the DE2 board, and synthesize the circuit with Quartus II.  
 4. Download your circuit into the FPGA chip and test its functionality.  
+
+**Part 4.**  
+Design and implement a circuit that displays the word PASS, in ticker-tape fashion, on the four 7-segment displays HEX3−0. Make the letters move from right to left in intervals of about one second. The patterns that should be displayed in successive clock intervals are given in Table 1.  
+Notice that the word PASS can be displayed using a 7-segment decoder you designed in a previous lab.  
+
+
+Table 1. Scrolling the word PASS in ticker-tape fashion.  
+
+1. Write a Verilog file that realizes the behaviour described above. You should use the 50 MHz clock on the DE2 board as the clock input to your circuit. Your circuit should have no other inputs beside the clock. As in Part III, the only clock in your design should be the 50 MHz clock.  
+2. Simulate your circuit with QSim to verify its correctness.  
+3. Include the pin constraints for the DE2 board, and synthesize the circuit with Quartus II.  
+4. Download your circuit into the FPGA chip and test its functionality.  
+
+**Part 5.**  
+Figure 2 below shows an 8-bit multiplier circuit with registers on its inputs. Each register has an active-high load enable input; that is, at a positive clock edge, the register loads the 8-bit value on its input only if its corresponding enable input is logic-1. Multiplication can be implemented in Verilog with the * operator. Observe that the 8-bit multiplier has a 16-bit output; do you know why?  
+Design and compile your circuit with Quartus II software, download it onto a DE2 board, and test its operation as follows:  
+1. Create a new Quartus II project.  
+2. Write Verilog code that describes the circuit in Figure 2. You are encouraged to use procedural Verilog.  
+3. Connect input DATA to switches SW7−0, and use KEY0 as a manual clock input. Use SW8 as LoadEnable1 and use SW9 as LoadEnable2. The product output should be displayed on red LEDR15−0 lights and also using the four 7-segment displays HEX3 − 0. You should use four instances of the 7-segment display decoder from your prior lab.  
+4. Simulate the circuit with QSim. Your simulation should load the two registers, allowing you to verify the correct product was computed.  
+5. Assign the pins on the FPGA to connect to the switches, keys and 7-segment displays.  
+6. Compile your design and load the circuit onto the DE2 board. Test the circuit by loading the registers with different values and observing the output on the HEX displays and red LEDs.  
